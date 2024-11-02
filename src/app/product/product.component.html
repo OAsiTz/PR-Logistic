@@ -1,0 +1,31 @@
+<!-- home.component.html -->
+<div class="container mx-auto p-4">
+    <table class="min-w-full bg-white">
+      <thead>
+        <tr class="bg-blue-700 text-white">
+          <th class="py-2 px-4 border w-1/5">ID</th>
+          <th class="py-2 px-4 border w-2/5">Serial Number</th>
+          <th class="py-2 px-4 border w-2/5">Status</th>
+          <th class="py-2 px-4 border w-1/5">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items; let i = index" class="hover:bg-gray-100">
+          <td class="py-2 px-4 border">{{ i + 1 }}</td>
+          <td class="py-2 px-4 border">{{ item.serialNumber }}</td>
+          <td class="py-2 px-4 border">{{ item.status }}</td>
+          <td class="py-2 px-2 border ">
+            <div class="flex space-x-5 justify-center">
+              <button class="text-blue-500 hover:text-blue-700">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="text-red-500 hover:text-red-700">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
